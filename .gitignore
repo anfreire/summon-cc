@@ -2,7 +2,6 @@
 # machines whose global excludes file hides them (repo rules outrank global ones).
 !AGENTS.md
 !CLAUDE.md
-!GEMINI.md
 
 .DS_Store
 .claude/
