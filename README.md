@@ -4,6 +4,12 @@
 in the background — briefs them, watches them work, answers their questions, collects
 their reports. No terminal scraping. No babysitting.
 
+![summon-cc: an opencode agent conducts a Claude Code worker — brief, spawn, question, answer, report, teardown](https://raw.githubusercontent.com/anfreire/summon-cc/main/docs/demo.gif)
+
+*Above, unscripted: an **opencode** agent running **Kimi K2.6** briefs and spawns a Claude
+Code worker, waits on file signals, reads its question, answers by digit, collects the
+report, and tears the session down — one prompt, "Build · Kimi K2.6 · 58.0s".*
+
 ## Install
 
 ```bash
@@ -35,7 +41,9 @@ Your agent now knows how to:
 - **answer** questions by number, **poke** mid-run, **read** the final report, **tear down**
 
 Workers are full sessions: they use tools, ask before doing anything irreversible, and
-end with a report. Run one at a time or a whole fleet.
+end with a report. Run one at a time or a whole fleet. Born from a real run: a
+trading-bot features layer implemented and peer-reviewed by supervised workers —
+~40 minutes of unattended work, driven on a few hundred tokens of orchestrator context.
 
 <details>
 <summary><b>How it works</b></summary>
@@ -72,10 +80,6 @@ own Claude Code use writes nothing.
 Claude Code's native `claude --bg` runs fire-and-forget background agents managed from
 inside Claude Code; summon is the other shape — any harness as the conductor, fully
 interactive workers, questions and reports routed back as file signals.
-
-Born from a real run: a trading-bot features layer implemented and peer-reviewed by
-supervised workers — ~40 minutes of unattended work, driven on a few hundred tokens of
-orchestrator context.
 
 </details>
 
